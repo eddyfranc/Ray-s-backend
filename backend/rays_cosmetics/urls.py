@@ -19,13 +19,19 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path,include
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Welcome to Rays Cosmetics!")
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+     path('', home, name='home'), 
+     path('admin/', admin.site.urls),
     path('catalog/', include('apps.catalog.urls')),
-    path('orders/', include('apps.orders.urls')),
-    path('payments/', include('apps.payments.urls')),
-    path('users/', include('apps.users.urls')),
+    # path('orders/', include('apps.orders.urls')),
+    # path('payments/', include('apps.payments.urls')),
+    # path('users/', include('apps.users.urls')),
+    
 ]
 
 
