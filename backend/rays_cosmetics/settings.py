@@ -346,23 +346,33 @@ USE_TZ = True
 # STATIC FILES  ✅ FIXED FOR RENDER
 # ==================================================
 
-STATIC_URL = "/static/"
+# STATIC FILES
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# optional local static folder
-STATICFILES_DIRS = [BASE_DIR / "static"] if (BASE_DIR / "static").exists() else []
+# Always include top-level static if it exists
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # WhiteNoise storage
-STATICFILES_STORAGE = (
-    "whitenoise.storage.CompressedManifestStaticFilesStorage"
-)
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# ==================================================
-# MEDIA FILES (Product Images)
-# ==================================================
+# STATIC_URL = "/static/"
+# STATIC_ROOT = BASE_DIR / "staticfiles"
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+# # optional local static folder
+# STATICFILES_DIRS = [BASE_DIR / "static"] if (BASE_DIR / "static").exists() else []
+
+# # WhiteNoise storage
+# STATICFILES_STORAGE = (
+#     "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# )
+
+# # ==================================================
+# # MEDIA FILES (Product Images)
+# # ==================================================
+
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = BASE_DIR / "media"
 
 # ==================================================
 # DEFAULT FIELD
