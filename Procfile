@@ -1,1 +1,1 @@
-web: gunicorn rays_cosmetics.wsgi:application
+web: gunicorn backend.wsgi:application
