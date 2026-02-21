@@ -30,9 +30,8 @@ urlpatterns = [
     path('catalog/', include('apps.catalog.urls')),
     path('orders/', include('apps.orders.urls')),
     path('payments/', include('apps.payments.urls')),
-    # path('users/', include('apps.users.urls')),
-    
-    
+    path('users/', include('apps.users.urls')),
+     
     
 ]
 

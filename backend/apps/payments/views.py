@@ -46,3 +46,8 @@ class ConfirmPaymentView(APIView):
         return Response({"message": "Payment successful"})
     
     
+
+from rest_framework.permissions import IsAuthenticated
+
+class CartView(APIView):
+    permission_classes = [IsAuthenticated]
