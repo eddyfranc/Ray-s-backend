@@ -6,3 +6,5 @@ urlpatterns = [
     path("cart/add/", AddToCartView.as_view(), name="add-to-cart"),
     path("checkout/", CheckoutView.as_view(), name="checkout"),
 ]
+
+
