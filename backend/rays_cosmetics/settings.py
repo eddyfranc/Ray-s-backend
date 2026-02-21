@@ -22,12 +22,13 @@ load_dotenv(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@$jze4mu@)g8%-i4vks2r9!y$9fqo!bss86k@vslb!k4c3nh)f'
+# SECRET_KEY = 'django-insecure-@$jze4mu@)g8%-i4vks2r9!y$9fqo!bss86k@vslb!k4c3nh)f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['your-render-app.onrender.com']
 
 CORS_ALLOW_ALL_ORIGINS = True   
 SECURE_BROWSER_XSS_FILTER = True
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
