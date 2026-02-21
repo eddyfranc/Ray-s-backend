@@ -251,8 +251,6 @@ AUTH_USER_MODEL = "users.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-
-    # WhiteNoise MUST be directly after security middleware
     "whitenoise.middleware.WhiteNoiseMiddleware",
 
     "corsheaders.middleware.CorsMiddleware",
@@ -355,6 +353,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # WhiteNoise storage
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+WHITENOISE_USE_FINDERS = True
 
 # STATIC_URL = "/static/"
 # STATIC_ROOT = BASE_DIR / "staticfiles"
